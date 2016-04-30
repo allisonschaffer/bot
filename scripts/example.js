@@ -18,4 +18,16 @@ module.exports = function(robot) {
 		response.reply('Call on ' + user.real_name + '!')
 	})
 
+
+	robot.hear(/test/i, function(response) {
+		response.send("I'm working!")
+	})
+
+
+	robot.hear(/quotes/i, function(response) {
+		var randomQuotes = ['Quote 1', 'Quote 2', 'Quote 3', 'Quote 4', 'Quote 5'][Math.floor(Math.random() * 5)]
+		response.send(randomQuotes)
+	})
+
+
 }
